@@ -16,6 +16,11 @@ Seguindo essas instruções, o servidor já estará de pé, e pronto para recebe
 
 Vale ressaltar que há apenas três rotas mapeadas, duas apontando para o mesmo endereço ```/appointments```, porém uma é do tipo GET e a outra é do tipo POST. Sendo GET a rota que retornará todos os agendamentos, e POST a rota que irá cadastrar um agendamento. E uma rota do tipo GET apontando para ```/``` que retornará uma mensagem de "Hello World", pode ser usada a caráter de teste.
 
-O node por padrão irá rodar na porta 3333, caso haja conflitos com essa porta, basta criar um arquivo ```.env``` e inserir nele a porta desejada. Por exemplo ```PORT=5000```.
+O node por padrão irá rodar na porta 3333, caso haja conflitos com essa porta, basta criar um arquivo ```.env``` e inserir nele a porta desejada. Por exemplo ```PORT=5000```. No terminal em que o comando start for executado, uma mensagem irá aparecer, mostrando a porta em que o sistema estará rodando.
+
+```
+http://localhost:3333/
+```
+Nesse caso a porta é a padrão do sistema.
 
 É imprescindível que o node e o yarn estejam instalados (podendo o yarn ser substituido pelo npm). Sugiro que utilizem a versão mais recente do Yarn, e a versão LTS do Node para melhor fluídez da aplicação.
