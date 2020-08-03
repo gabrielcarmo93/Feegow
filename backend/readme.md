@@ -1,7 +1,7 @@
 # Backend
 
 Para o backend, escolhi Node, pela facilidade que o framework consegue trabalhar com problemas que nos deparamos no cotidiano.
-Utilizando o **express** como principal framework para realizar o tráfego HTTP entre as possíveis camadas da aplicação.
+Utilizando o **Express** como principal framework para realizar o tráfego HTTP entre as possíveis camadas da aplicação.
 E para banco de dados, apesar da orientação dos bancos (MySQL/POSTGRESQL), escolhi um banco, também relacional, que é o SQlite, pela facilitade de subir seus serviços de armazenamento sem ter que pensar em credenciais de conexão e outras coisas que sabemos que as vezes é trabalhoso colocar de pé para funcionamento.
 
 Para iniciar a aplicação do backend é necessário entrar na pasta **web** do projeto e através do terminal, rodar o comando:
