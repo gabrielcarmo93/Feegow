@@ -8,7 +8,8 @@ module.exports = {
   },
 
   async create(req, res) {
-    const { specialty_id, professional_id, name, cpf, source_id, birthdate, date_time } = req.body
+    console.log('entrou')
+    const { specialty_id, professional_id, name, cpf, source_id, birthdate, date_time = Date.now() } = req.body
 
     const appointment = await knex('appointments').insert({specialty_id, professional_id, name, cpf, source_id, birthdate, date_time})
 

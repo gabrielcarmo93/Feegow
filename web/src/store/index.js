@@ -3,8 +3,10 @@ import { createStore } from 'redux'
 const INITIAL_STATE = {
   specialtiesOpts: [],
   professionals: [],
+  sources: [],
   selectedProfessional: null,
-  selectedSpecialty: null
+  selectedSpecialty: null,
+  selectedSource: null
 }
 
 function reducer(state = INITIAL_STATE, action) {
@@ -19,6 +21,13 @@ function reducer(state = INITIAL_STATE, action) {
     return {
       ...state,
       professionals: action.data
+    }
+  }
+  
+  if (action.type === 'SET_SOURCE') {
+    return {
+      ...state,
+      sources: action.data
     }
   }
 
