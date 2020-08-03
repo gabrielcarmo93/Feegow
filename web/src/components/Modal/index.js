@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import api from '../../services/api'
 import { connect } from 'react-redux'
 
+import moment from 'moment'
+
 import { Select, Input, Form, Button, Buttons } from './styles'
 import Modal from 'react-modal'
 
@@ -84,7 +86,7 @@ const MyModal = ({ modules, dispatch }) => {
         setName(value)
         break
       case 'birthdate':
-        setBirthdate(value)
+        setBirthdate(moment(value, 'YYYY-MM-DD').format())
         break
       case 'sourceId':
         setSourceId(value)
@@ -99,7 +101,7 @@ const MyModal = ({ modules, dispatch }) => {
 
   const handleSubmit = async e => {
     e.preventDefault()
-    data['date_time'] = Date.now()
+    data['date_time'] = moment()
     if (validateForm()) {
       const response = await api.local.post('/appointments', data)
 
